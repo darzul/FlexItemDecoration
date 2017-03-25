@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pokemons_item_space">8dp</dimen>
+    <dimen name="pokemons_list_paddingTop">32dp</dimen>
+    <dimen name="pokemons_list_paddingBottom">16dp</dimen>
+</resources>

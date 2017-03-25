@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+
+ext {
+    bintrayRepo = 'FlexItemDecoration'
+    bintrayName = 'FlexItemDecoration'
+
+    publishedGroupId = 'com.darzul.flexitemdecoration'
+    libraryName = 'FlexItemDecoration'
+    artifact = 'flexitemdecoration'
+
+    libraryDescription = 'Create your RecyclerView.ItemDecoration easily'
+
+    siteUrl = 'https://github.com/darzul/FlexItemDecoration'
+    gitUrl = 'https://github.com/darzul/FlexItemDecoration'
+
+    libraryVersion = "${versionMajor}.${versionMinor}.${versionPatch}"
+
+    developerId = 'DarzuL'
+    developerName = 'Guillaume Bourderye'
+    developerEmail = 'guillaumebourderye@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+
+    testCompile 'junit:junit:4.12'
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

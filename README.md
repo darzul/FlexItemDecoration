@@ -37,7 +37,7 @@ Download
 
 Gradle dependency:
 ```groovy
-compile 'com.darzul.flexitemdecoration:flexitemdecoration:1.0.0'
+compile 'com.darzul.flexitemdecoration:flexitemdecoration:1.0.1'
 ```
 
 License

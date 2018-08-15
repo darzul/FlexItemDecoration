@@ -1,1 +1,2 @@
 -keep public class com.darzul.flexitemdecoration.BaseItemDecoration$Builder {*;}
+-keep public class com.darzul.flexitemdecoration.BaseItemDecoration {*;}
